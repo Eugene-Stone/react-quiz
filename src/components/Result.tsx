@@ -1,6 +1,10 @@
 import { questions } from './Questions';
 
-export default function Result({ countCurrent }) {
+type typePropsResult = {
+	countCurrent: number;
+};
+
+export default function Result({ countCurrent }: typePropsResult) {
 	return (
 		<div className="result">
 			<img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />

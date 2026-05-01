@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import Quiz from './components/Quiz/Quiz.jsx';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
 	return (

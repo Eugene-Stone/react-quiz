@@ -7,11 +7,8 @@ import Game from '../Game';
 import Result from '../Result';
 
 function Quiz() {
-	const [step, setStep] = useState(0);
-	const [countCurrent, setCountCurrent] = useState(0);
-
-	// console.log(step);
-	// console.log(questions.length);
+	const [step, setStep] = useState<number>(0);
+	const [countCurrent, setCountCurrent] = useState<number>(0);
 
 	return (
 		<div className="quiz">
@@ -23,7 +20,7 @@ function Quiz() {
 					setCountCurrent={setCountCurrent}
 				/>
 			) : (
-				<Result step={step} countCurrent={countCurrent} />
+				<Result countCurrent={countCurrent} />
 			)}
 		</div>
 	);

@@ -1,4 +1,12 @@
-export const questions = [
+type typeQuestion = {
+	title: string;
+	variants: string[];
+	correct: number;
+};
+
+type typeQuestions = typeQuestion[];
+
+export const questions: typeQuestions = [
 	{
 		title: 'React - это ... ?',
 		variants: ['библиотека', 'фреймворк', 'приложение'],

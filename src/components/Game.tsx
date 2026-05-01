@@ -1,13 +1,22 @@
 import { questions } from './Questions';
 
-export default function Game(props) {
+type typePropsGame = {
+	step: number;
+	countCurrent: number;
+	// setStep: (a: number) => number;
+	// setCountCurrent: (a: number) => number;
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+	setCountCurrent: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export default function Game(props: typePropsGame) {
 	const stepTitle = questions[props.step].title;
 	const stepCurrent = questions[props.step].correct;
 	const stepQuestions = questions[props.step].variants;
 	const progressBar = (props.step / questions.length) * 100;
 
 	// console.log(stepQuestions);
-	function handleAnswerQuestion(index) {
+	function handleAnswerQuestion(index: number) {
 		if (stepCurrent === index) {
 			props.setCountCurrent(props.countCurrent + 1);
 		}
